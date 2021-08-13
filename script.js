@@ -3,6 +3,7 @@ const rockBtn = document.querySelector(".rock-btn");
 const scissorsBtn = document.querySelector(".scissors-btn");
 const computerChoice = document.querySelector(".computer-choice");
 const playerChoice = document.querySelector(".player-choice");
+const labelResult = document.querySelector(".result");
 
 paperBtn.addEventListener("click", () => {
   playerChoice.textContent = "Papel";
@@ -36,30 +37,30 @@ function handleWhoWinTheGame() {
   switch (true) {
     case playerChoice.textContent === "Papel" &&
       computerChoice.textContent === "Pedra":
-      console.log("Papel cobre pedra. Voce venceu");
+      labelResult.textContent = "Papel cobre pedra. Você venceu!";
       break;
     case playerChoice.textContent === "Papel" &&
       computerChoice.textContent === "Tesoura":
-      console.log("Tesoura corta papel. Voce perdeu");
+      labelResult.textContent = "Tesoura corta papel. Você perdeu!";
       break;
     case playerChoice.textContent === "Pedra" &&
       computerChoice.textContent === "Tesoura":
-      console.log("Pedra quebra tesoura. Voce venceu");
+      labelResult.textContent = "Pedra quebra tesoura. Você venceu!";
       break;
     case playerChoice.textContent === "Pedra" &&
       computerChoice.textContent === "Papel":
-      console.log("Papel cobre pedra. Voce perdeu");
+      labelResult.textContent = "Papel cobre pedra. Você perdeu!";
       break;
     case playerChoice.textContent === "Tesoura" &&
       computerChoice.textContent === "Papel":
-      console.log("Tesoura corta papel. Voce ganhou");
+      labelResult.textContent = "Tesoura corta papel. Você ganhou!";
       break;
     case playerChoice.textContent === "Tesoura" &&
       computerChoice.textContent === "Pedra":
-      console.log("Pedra quabra tesoura. Voce perdeu");
+      labelResult.textContent = "Pedra quebra tesoura. Você perdeu!";
       break;
     default:
-      console.log("Empatou");
+      labelResult.textContent = "Empate";
       break;
   }
 }
