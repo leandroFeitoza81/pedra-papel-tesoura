@@ -39,6 +39,7 @@ header {
   margin: 30px;
   border-radius: 4px;
   padding: 20px;
+  text-align: center;
 }
 
 .player {
@@ -59,7 +60,7 @@ header {
   height: 150px;
 }
 
-.meio {
+.versus {
   display: flex;
   flex-direction: column;
   justify-content: center;
