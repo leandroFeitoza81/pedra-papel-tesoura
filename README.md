@@ -24,7 +24,7 @@ $cd pedra-papel-tesoura
 - Instruções de uso:
 
 Abra o arquivo index.html no seu navegador
-Escolha sua entre pedra papel tesoura nos botões de seleção e divirta-se!!
+Faça sua escolha entre pedra papel tesoura nos botões de seleção e divirta-se!!
 
 ### Tecnologias:
 
