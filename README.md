@@ -14,7 +14,10 @@
   Com o git instalado abra o terminal e digite:
 
 ```bash
-$git clone <https://github.com/leandroFeitoza81/pedra-papel-tesoura.git>
+$git clone https://github.com/leandroFeitoza81/pedra-papel-tesoura.git
+```
+
+```bash
 $cd pedra-papel-tesoura
 ```
 
@@ -22,3 +25,13 @@ $cd pedra-papel-tesoura
 
 Abra o arquivo index.html no seu navegador
 Escolha sua entre pedra papel tesoura nos botões de seleção e divirta-se!!
+
+### Tecnologias:
+
+- HTML
+- CSS
+- JavaScript
+
+## Autor:
+
+@leandroFeitoza81
