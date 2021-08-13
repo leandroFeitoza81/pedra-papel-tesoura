@@ -1,30 +1,65 @@
 const paperBtn = document.querySelector(".paper-btn");
 const rockBtn = document.querySelector(".rock-btn");
 const scissorsBtn = document.querySelector(".scissors-btn");
-const showComputerChoice = document.querySelector(".computer-choice");
-const showPlayerChoice = document.querySelector(".player-choice");
+const computerChoice = document.querySelector(".computer-choice");
+const playerChoice = document.querySelector(".player-choice");
 
 paperBtn.addEventListener("click", () => {
-  showPlayerChoice.textContent = "Papel";
-  showComputerChoice.textContent = computerChoice();
+  playerChoice.textContent = "Papel";
+  computerChoice.textContent = handleComputerChoice();
+  handleWhoWinTheGame();
 });
 
 rockBtn.addEventListener("click", () => {
-  showPlayerChoice.textContent = "Pedra";
-  showComputerChoice.textContent = computerChoice();
+  playerChoice.textContent = "Pedra";
+  computerChoice.textContent = handleComputerChoice();
+  handleWhoWinTheGame();
 });
 
 scissorsBtn.addEventListener("click", () => {
-  showPlayerChoice.textContent = "Tesoura";
-  showComputerChoice.textContent = computerChoice();
+  playerChoice.textContent = "Tesoura";
+  computerChoice.textContent = handleComputerChoice();
+  handleWhoWinTheGame();
 });
 
-const listaChoice = ["Pedra", "Papel", "Tesoura"];
+const listChoice = ["Pedra", "Papel", "Tesoura"];
 
 function getRandomIndex() {
   return Math.floor(Math.random() * 3);
 }
 
-function computerChoice() {
-  return listaChoice[getRandomIndex()];
+function handleComputerChoice() {
+  return listChoice[getRandomIndex()];
+}
+
+function handleWhoWinTheGame() {
+  switch (true) {
+    case playerChoice.textContent === "Papel" &&
+      computerChoice.textContent === "Pedra":
+      console.log("Papel cobre pedra. Voce venceu");
+      break;
+    case playerChoice.textContent === "Papel" &&
+      computerChoice.textContent === "Tesoura":
+      console.log("Tesoura corta papel. Voce perdeu");
+      break;
+    case playerChoice.textContent === "Pedra" &&
+      computerChoice.textContent === "Tesoura":
+      console.log("Pedra quebra tesoura. Voce venceu");
+      break;
+    case playerChoice.textContent === "Pedra" &&
+      computerChoice.textContent === "Papel":
+      console.log("Papel cobre pedra. Voce perdeu");
+      break;
+    case playerChoice.textContent === "Tesoura" &&
+      computerChoice.textContent === "Papel":
+      console.log("Tesoura corta papel. Voce ganhou");
+      break;
+    case playerChoice.textContent === "Tesoura" &&
+      computerChoice.textContent === "Pedra":
+      console.log("Pedra quabra tesoura. Voce perdeu");
+      break;
+    default:
+      console.log("Empatou");
+      break;
+  }
 }
