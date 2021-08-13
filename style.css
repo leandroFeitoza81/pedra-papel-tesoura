@@ -8,7 +8,7 @@
 body {
   background-color: rgba(5, 122, 218, 0.699);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-rendering: optimizeLegibility;
 }
 
@@ -39,4 +39,52 @@ header {
   margin: 30px;
   border-radius: 4px;
   padding: 20px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 150px;
+}
+
+.computer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 150px;
+}
+
+.meio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 150px;
+  justify-content: center;
+  align-content: center;
+}
+
+.action-game {
+  display: flex;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 10px;
+}
+
+.player-choice .computer-choice {
+  padding: 10px;
 }

@@ -1,21 +1,25 @@
 const paperBtn = document.querySelector(".paper-btn");
 const rockBtn = document.querySelector(".rock-btn");
 const scissorsBtn = document.querySelector(".scissors-btn");
-const lbl = document.querySelector(".lbl");
+const showComputerChoice = document.querySelector(".computer-choice");
+const showPlayerChoice = document.querySelector(".player-choice");
 
 paperBtn.addEventListener("click", () => {
-  lbl.textContent = computerChoice();
+  showPlayerChoice.textContent = "Papel";
+  showComputerChoice.textContent = computerChoice();
 });
 
 rockBtn.addEventListener("click", () => {
-  lbl.textContent = computerChoice();
+  showPlayerChoice.textContent = "Pedra";
+  showComputerChoice.textContent = computerChoice();
 });
 
 scissorsBtn.addEventListener("click", () => {
-  lbl.textContent = computerChoice();
+  showPlayerChoice.textContent = "Tesoura";
+  showComputerChoice.textContent = computerChoice();
 });
 
-const listaChoice = ["pedra", "papel", "tesoura"];
+const listaChoice = ["Pedra", "Papel", "Tesoura"];
 
 function getRandomIndex() {
   return Math.floor(Math.random() * 3);
